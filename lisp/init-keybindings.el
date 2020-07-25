@@ -11,7 +11,7 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
-
+(global-set-key (kbd "s-/") 'hippie-expand)
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
 (global-set-key (kbd "<f2>") 'open-init-file)
 

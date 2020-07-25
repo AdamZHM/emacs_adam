@@ -1,22 +1,8 @@
-(package-initialize)
-
-(add-to-list 'load-path "~/.emacs.d/lisp")
-
-;; 快速打开配置文件
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-(require 'init-package)
-(require 'init-ui.el)
-(require 'init-better-defaults)
-(require 'init-keybindings.el)
-(require 'org) 
+(require 'org-install)
+(require 'ob-tangle)
+(org-babel-load-file (expand-file-name "adam.org" user-emacs-directory))
 
 
-(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
-
-(load-file custom-file)
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
